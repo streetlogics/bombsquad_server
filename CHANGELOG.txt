@@ -1,0 +1,59 @@
+1.4.106 (14280):
+- the game will now only print 'game full' player-rejection messages to the client attempting to join; should reduce annoying message spam.
+
+1.4.101 (14268):
+- the game will now attempt to load connecting players' profiles and info from my master-server instead of trusting the player; should reduce cheating
+
+1.4.100 (14264):
+- added a 'playlistCode' option in the server config which corresponds with playlist codes added in BombSquad 1.4.100 (used for sharing playlists with friends). Now you can create a custom playlist, grab a code for it, and easily use it in a dedicated server.
+
+1.4.99 (14252):
+- there is now a forced 10 second delay between a player leaving the game and another player from that same client joining the game.  This should fix the exploit where players were leaving and re-joining to avoid spawn times.
+- most in-game text is now set as bs.Lstr() values so that they show up in the client's own language instead of the server's  There are currently a few exceptions such as time values which I need to address.
+
+1.4.98 (14248):
+- added kick-votes that can be started by any client.  currently a client must type '0' or '1' in chat to vote, but i'll add buttons for them soon.
+- modified text nodes so they can display in each client's own language.  (most text nodes don't do this yet but the capability is there).  However this means older clients can't connect to 1.4.98 servers, so you may want to stick with an older server for a bit until the userbase gets more updated.
+
+1.4.97 (14247):
+- back to displaying long names in more places; mainly just the in-game ones are clamped..  trying to find a good balance..
+
+1.4.97 (14246):
+- public party names will now show up for clients as the title of their party windows instead of "My Party" and also during connect/disconnect (requires client 14246+)
+- server now ignores 'locked' states on maps/game-types, so meteor-shower, target-practice, etc. should work now
+
+1.4.97 (14244):
+- kicked players are now unable to rejoin for a several minutes
+
+1.4.96 (14242):
+- chat messages and the party window now show player names instead of account names when possible
+- server now clamps in-game names to 8 characters so there's some hope of reading them in-game. Can loosen this or add controls for how clamping happens if need be.
+
+1.4.96 (14241):
+- added an automatic chat-block to combat chat spammers. Blocks start at 10 seconds and double in duration for each repeat offense
+
+1.4.95 (14240):
+- fixed an issue where a single account could not be used to host multiple parties at once
+
+1.4.95 (14236):
+- added a port option to the config so its now possible to host multiple parties on one machine (note that bombsquad 1.4.95+ is required to connect ports aside from 43210)
+
+1.4.95 (14234):
+- fixed a bug that could cause the windows version to freeze randomly after a while
+
+1.4.95 (14233):
+- bombsquad (both bs_headless and regular) now reads commands from standard input, making it easier to run commands via scripts or the terminal
+- server now runs using a 'server' account-type instead of the local 'device' account. (avoids daily-ticket-reward messages and other stuff that's not relevant to servers)
+- the server script now passes args to the game as a json file instead of individual args; this should keep things cleaner and more expandable
+- the bombsquad_server script also now reads commands from stdin, allowing reconfiguring server settings on the fly
+- added more options such as the ability to set game series lengths and to host a non-public party
+
+1.4.94:
+- now have mac, windows, and both 32 and 64 bit linux server builds
+- added an optional config.py file that can be used instead of modifying the server script itself
+- added an autoBalanceTeams option for teams games
+- people joining and leaving the party are no longer announced (too much noise)
+
+1.4.93:
+- should now properly allow clients to use their unlocked characters
+- added an option to enable telnet access
