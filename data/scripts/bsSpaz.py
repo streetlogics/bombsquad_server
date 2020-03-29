@@ -3127,25 +3127,25 @@ t.colorTexture = "agentColor"
 t.colorMaskTexture = "agentColorMask"
 t.defaultColor = (0.3,0.3,0.33)
 t.defaultHighlight = (1,0.5,0.3)
-t.iconTexture = "agentIcon"
+t.iconTexture = "curseIcon"
 t.iconMaskTexture = "agentIconColorMask"
-t.headModel =     "agentHead"
-t.torsoModel =    "agentTorso"
-t.pelvisModel =   "agentPelvis"
-t.upperArmModel = "agentUpperArm"
+t.headModel =     "tntHead"
+t.torsoModel =    "wrestlerTorso"
+t.pelvisModel =   "witchPelvis"
+t.upperArmModel = "penguinUpperArm"
 t.foreArmModel =  "agentForeArm"
-t.handModel =     "agentHand"
-t.upperLegModel = "agentUpperLeg"
+t.handModel =     "GrumbledorfHand"
+t.upperLegModel = "zoeUpperLeg"
 t.lowerLegModel = "agentLowerLeg"
-t.toesModel =     "agentToes"
+t.toesModel =     "pixieToes"
 agentSounds =    ['agent1','agent2','agent3','agent4']
-agentHitSounds = ['agentHit1','agentHit2']
+agentHitSounds = ['pixieHit1','GrumbledorfHit2']
 t.attackSounds = agentSounds
 t.jumpSounds = agentSounds
 t.impactSounds = agentHitSounds
-t.deathSounds=["agentDeath"]
+t.deathSounds=["pixieDeath"]
 t.pickupSounds = agentSounds
-t.fallSounds=["agentFall"]
+t.fallSounds"curseFall"]
 t.style = 'agent'
 
 # Jumpsuit ###################################
