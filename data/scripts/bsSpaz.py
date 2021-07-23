@@ -8,7 +8,7 @@ import bsInternal
 # list of defined spazzes
 appearances = {}
 
-def getAppearances(includeLocked=False):
+def getAppearances(includeLocked=True):
     disallowed = []
     if not includeLocked:
         # hmm yeah this'll be tough to hack...
